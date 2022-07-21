@@ -1,0 +1,39 @@
+#include<stdio.h>
+int judge(int a)
+{
+	for (int i = 2; i < a; i++)
+	{
+		int b = (a % i);
+		if (b == 0)
+		{
+			return 0;
+		}
+		return 1;
+	}
+
+}
+int judge(int a)
+{
+	for (int i = 2; i < a; i++)
+	{
+		int b = a % i;
+		if (b == 1)
+			break;
+		else
+			return 0;
+	}
+	return 1;
+}
+int main()
+{
+	int a = 0;
+	scanf_s("%d", &a);
+	int b = judge(a);
+	if (b == 1)
+	{
+		printf("该数为素数");
+	}
+	else
+	{
+		printf("该数不为素数");
+	}
